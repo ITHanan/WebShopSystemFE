@@ -1,11 +1,18 @@
-import LoginForm from './components/LoginForm.jsx'
+import { HashRouter,Routes,Route } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
-	return (
-		<div>
-		<LoginForm />
-		</div>
-	)
+
+  return (
+	<HashRouter>
+		<Routes>
+			<Route path="/" element={<Home></Home>}></Route>
+		</Routes>
+	</HashRouter>
+
+
+
+  )
 }
 
 export default App
