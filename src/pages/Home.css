@@ -1,0 +1,27 @@
+.circle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(to bottom right, #FF8E04, #F6EEE4);
+	border-radius: 100%;
+}
+.background-none{
+background: transparent;
+}
+.main{
+	display: flex;
+	flex-direction: row;
+}
+.main-text{
+	margin-left:0 ;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+.main-text>*{
+	padding-bottom: 10px;
+}
