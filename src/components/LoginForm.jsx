@@ -7,7 +7,27 @@ const LoginForm = () => {
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		//todo: Implement login logic here
+		fetch('https://localhost:7234/api/Auth/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ email, password }),
+		})
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error('Login failed');
+				}
+				return response.json();
+			})
+			.then((data) => {
+				// Handle successful login
+				console.log('Login successful:', data);
+			})
+			.catch((error) => {
+				// Handle errors
+				console.error('Error logging in:', error);
+			});
 	};
 	
 	return (
