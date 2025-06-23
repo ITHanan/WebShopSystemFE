@@ -1,0 +1,27 @@
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+}
+.title-header{
+	font-weight: bold;
+	font-size: 20px;
+}
+.border{
+	border-bottom: 2px solid black;
+	color: #444444;
+}
+.color-orange{
+	color: #FF8E04;
+}
+.big-font{
+	font-size: 50px;
+}
+.f-font{
+	margin-left: 10px;
+  transform: rotate(20deg);
+    display: inline-block; 
+
+}
+.icon>*{
+padding: 10px;}
