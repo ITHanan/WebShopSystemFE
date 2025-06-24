@@ -13,7 +13,6 @@ function Header(){
 				<NavLink to="/login"><img src={vector} /></NavLink>
 				<NavLink><img src={heart} /></NavLink>
 				<NavLink><img src={basket} /></NavLink>
-
 			</div>
 
 		</div>

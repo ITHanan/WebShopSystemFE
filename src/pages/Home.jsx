@@ -1,10 +1,12 @@
 import "../pages/Home.css"
 import Header from "../components/Header";
 import "../pages/Home.css"
+import Nav from "../components/Nav";
 function Home(){
 	return(
 		<div className="container">
 		<Header></Header>
+		<Nav></Nav>
 		<div className="main">
 		<div className="circle">
 		<p className="background-none">Everything</p>

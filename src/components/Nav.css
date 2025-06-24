@@ -1,0 +1,13 @@
+.nav ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	font-weight: bold;
+}
+.nav ul li{
+	border-radius: 5px;
+	border: 2px solid #FF8E04;
+	padding: 10px;
+	margin: 10px;
+}
