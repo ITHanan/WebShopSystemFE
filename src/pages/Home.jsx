@@ -62,13 +62,14 @@ function Home(){
 		<Header></Header>
 		<Nav></Nav>
 		<div className="main">
+		<div className="circle-out">
 		<div className="circle">
 		<p className="background-none">Everything</p>
 		<p className="background-none"> You Need 
 		</p>
 		<p className="background-none">to Practice
 		</p>
-		
+		</div>
 		</div>
 		<div className="main-text">
 		<p>More than 10 languages</p>
