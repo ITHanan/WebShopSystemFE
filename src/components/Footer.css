@@ -1,0 +1,21 @@
+.footer{
+	padding-top: 30px;
+	font-size: 14px;
+	margin: 80px 20px 20px 80px;
+	border-top: 2px solid black;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer-title{
+	align-items: center;
+	display: flex;
+}
+.footer-title img{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.title{
+	font-size: 16px;
+	color: #FF8E04;
+}

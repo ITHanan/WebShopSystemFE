@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import "../pages/Home.css"
 import Nav from "../components/Nav";
 import Flugs from "../components/Flags";
+import Footer from "../components/Footer";
 function Home(){
 	const flags=[
 		
@@ -85,7 +86,7 @@ function Home(){
 		))}
 		</div>
 		
-		
+		<Footer></Footer>
 		</div>
 	)
 }

@@ -24,7 +24,7 @@ background: transparent;
 	flex-direction: column;
 align-items: center;}
 .flag-container{
-	margin: 50px 150px 70px 150px;
+	margin: 70px 150px ;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 100px 100px;
