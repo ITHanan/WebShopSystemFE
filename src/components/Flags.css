@@ -1,0 +1,12 @@
+.flag{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 13px;
+}
+.flag img{
+	width: 50px;
+}
+.div-flags{
+	margin-top: 30px;
+}
