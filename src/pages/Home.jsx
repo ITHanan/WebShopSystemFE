@@ -68,6 +68,30 @@ function Home(){
 		<p className="background-none"> You Need 
 		</p>
 		<p className="background-none">to Practice
+			<div className="img-1">
+				<img src="/src/images/star.png" alt="star" />
+
+			</div>
+			<div className="img-2">
+				<img src="/src/images/sound.png" alt="sound" />
+
+			</div>
+			<div className="img-3">
+				<img src="/src/images/mobile.png" alt="mobile" />
+
+			</div>
+			<div className="img-4">
+				<img src="/src/images/check.png" alt="check" />
+
+			</div>
+			<div className="img-5">
+				<img src="/src/images/line.png" alt="line" />
+
+			</div>
+			<div className="img-6">
+				<img src="/src/images/mic.png" alt="mic" />
+
+			</div>
 		</p>
 		</div>
 		</div>
