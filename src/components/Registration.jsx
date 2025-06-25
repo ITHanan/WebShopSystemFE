@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/Registration.css'; 
+import pageLogo from '../assets/logo-page.png';
+
 
 const Registration = () => {
   const [form, setForm] = useState({
@@ -88,6 +90,7 @@ const Registration = () => {
             {message && <p>{message}</p>}
             <a className='signup-btn' href="/login">Sign up</a>
       </form>
+      <img className='page-logo-img' src={pageLogo} alt="Test your level here" />
     </div>
   );
 };
