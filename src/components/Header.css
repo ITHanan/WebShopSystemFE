@@ -25,3 +25,14 @@
 }
 .icon>*{
 padding: 10px;}
+@media screen and (max-width:700px) {
+	.header{
+		flex-direction: column;
+		padding: 10px;
+	}
+	.header>*{
+		margin: 10px;
+	}
+
+	
+}

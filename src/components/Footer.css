@@ -25,3 +25,18 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 .link:hover{
 	color: #a05800;
 }
+@media screen and (max-width:700px) {
+	.footer{
+		padding-top: 10px;
+		margin: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+}
+@media screen and (max-width:400px) {
+	.footer{
+	
+		grid-template-columns: 1fr;
+	}
+	
+}
