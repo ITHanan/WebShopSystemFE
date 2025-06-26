@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/LoginForm.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const navigate = useNavigate();
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -37,6 +39,7 @@ const LoginForm = () => {
 		<label>Email:</label>
 		<input
 		type="email"
+		placeholder='Email address'
 		value={email}
 		onChange={(e) => setEmail(e.target.value)}
 		required
@@ -46,12 +49,26 @@ const LoginForm = () => {
 		<label>Password:</label>
 		<input
 		type="password"
+		placeholder='Password'
 		value={password}
 		onChange={(e) => setPassword(e.target.value)}
 		required
 		/>
 		</div>
-		<button type="submit">Login</button>
+
+	            <div className="form-actions">
+                <button type="submit">Login</button>
+                <button
+                    type="button"
+                    className="switch-btn"
+                    onClick={() => navigate('/signup')}
+                >
+                    Sign up
+                </button>
+            </div>
+            <div className="lost-password">
+                Lost password? <a href="#">Click here</a>
+            </div>
 		</form>
 	);
 };
