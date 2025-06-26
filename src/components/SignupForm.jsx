@@ -11,12 +11,31 @@ const SignUpForm = () => {
 	
 	const handleSignup = (e) => {
 		e.preventDefault();
-		// TODO: add signup logic 
-		console.log('Signup:', {
-			fullName: signupName,
-			email: signupEmail,
-			password: signupPassword,
-			confirmPassword: signupConfirmPassword,
+		if (signupPassword !== signupConfirmPassword) {
+			alert("Passwords do not match!");
+			return;
+		}
+		fetch('https://localhost:7234/api/Auth/login', {// TODO: may need to update this URL to signup endpoint instead of login???
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				fullName: signupName,
+				email: signupEmail,
+				password: signupPassword
+			}),
+		})
+		.then(response => {
+			if (!response.ok) throw new Error('Signup failed');
+			return response.json();
+		})
+		.then(data => {
+			// Handle successful signup
+			console.log('Signup successful:', data);
+			navigate('/login');
+		})
+		.catch(error => {
+			// Handle errors
+			console.error('Error signing up:', error);
 		});
 	};
 	
