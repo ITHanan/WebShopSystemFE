@@ -8,13 +8,15 @@ const SignUpForm = () => {
 	const [signupPassword, setSignupPassword] = useState('');
 	const [signupConfirmPassword, setSignupConfirmPassword] = useState('');
 	const navigate = useNavigate();
-	
+	const [error, setError] = useState('');
+
 	const handleSignup = (e) => {
 		e.preventDefault();
 		if (signupPassword !== signupConfirmPassword) {
-			alert("Passwords do not match!");
+			setError("Passwords do not match!");
 			return;
 		}
+		setError("");
 		fetch('https://localhost:7234/api/Auth/login', {// TODO: may need to update this URL to signup endpoint instead of login???
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
@@ -41,6 +43,7 @@ const SignUpForm = () => {
 	
 	return (
 		<form className="signup-form" onSubmit={handleSignup}>
+			{error && <div className="error-message">{error}</div>}
 		<h2>Create your account</h2>
 		<div className="form-group">
 		<label>Full Name:</label>

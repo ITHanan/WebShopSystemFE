@@ -6,9 +6,15 @@ const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
-	
+	const [error, setError] = useState('');
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setError('');
+		if (!email || !password) {
+			setError('Email and password are required');
+			return;
+		}
 		fetch('https://localhost:7234/api/Auth/login', {
 			method: 'POST',
 			headers: {
@@ -34,6 +40,7 @@ const LoginForm = () => {
 	
 	return (
 		<form className='login-form' onSubmit={handleSubmit}>
+			{error && <div className="error-message">{error}</div>}
 		<h2>Login to your account</h2>
 		<div className='form-group'>
 		<label>Email:</label>
