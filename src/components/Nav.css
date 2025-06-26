@@ -17,9 +17,7 @@
 	background-color:#f9dfbf ;
 }
 @media screen and (max-width:700px) {
-	.nav ul{
-		justify-content: right;
-	}
+	
 	.nav ul li{
 	border-radius: 5px;
 	border: 2px solid #FF8E04;

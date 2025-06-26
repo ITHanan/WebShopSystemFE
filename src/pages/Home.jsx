@@ -67,7 +67,7 @@ function Home(){
 		<p className="background-none">Everything</p>
 		<p className="background-none"> You Need 
 		</p>
-		<p className="background-none">to Practice
+		<div className="background-none">to Practice
 			<div className="img-1">
 				<img src="/src/images/star.png" alt="star" />
 
@@ -92,7 +92,7 @@ function Home(){
 				<img src="/src/images/mic.png" alt="mic" />
 
 			</div>
-		</p>
+		</div>
 		</div>
 		</div>
 		<div className="main-text">
