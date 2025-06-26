@@ -31,17 +31,13 @@ function Home(){
 			src:"/src/images/image 14.png",
 			name:"Swedish"
 		},
-		{id:7,
-			src:"/src/images/Group 46.png",
-			name:"Switzerland"
-		},
 		{id:8,
 			src:"/src/images/image 5.png",
 			name:"English"
 		},
 		{id:9,
 			src:"/src/images/image 6.png",
-			name:"Brazilian"
+			name:"Portuguese"
 		},
 		{id:10,
 			src:"/src/images/image 15.png",
