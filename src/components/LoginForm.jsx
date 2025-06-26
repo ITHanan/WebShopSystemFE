@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import '../styles/LoginForm.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	
+	const navigate = useNavigate();
+	const [error, setError] = useState('');
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setError('');
+		if (!email || !password) {
+			setError('Email and password are required');
+			return;
+		}
 		fetch('https://localhost:7234/api/Auth/login', {
 			method: 'POST',
 			headers: {
@@ -32,11 +40,13 @@ const LoginForm = () => {
 	
 	return (
 		<form className='login-form' onSubmit={handleSubmit}>
+			{error && <div className="error-message">{error}</div>}
 		<h2>Login to your account</h2>
 		<div className='form-group'>
 		<label>Email:</label>
 		<input
 		type="email"
+		placeholder='Email address'
 		value={email}
 		onChange={(e) => setEmail(e.target.value)}
 		required
@@ -46,12 +56,26 @@ const LoginForm = () => {
 		<label>Password:</label>
 		<input
 		type="password"
+		placeholder='Password'
 		value={password}
 		onChange={(e) => setPassword(e.target.value)}
 		required
 		/>
 		</div>
-		<button type="submit">Login</button>
+
+	            <div className="form-actions">
+                <button type="submit">Login</button>
+                <button
+                    type="button"
+                    className="switch-btn"
+                    onClick={() => navigate('/signup')}
+                >
+                    Sign up
+                </button>
+            </div>
+            <div className="lost-password">
+                Lost password? <a href="#">Click here</a>
+            </div>
 		</form>
 	);
 };

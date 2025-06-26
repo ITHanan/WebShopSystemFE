@@ -1,14 +1,14 @@
-.login-form {
-	max-width: 340px;
+.signup-form {
+	max-width: 360px;
 	margin: 2.5rem auto;
 	padding: 2.2rem 2rem 2rem 2rem;
-	background: #fff;
+	background: #f9fafc;
 	border-radius: 10px;
 	box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-	color: #444444;
+	color: #333;
 }
 
-.login-form h2 {
+.signup-form h2 {
 	margin-bottom: 1.7rem;
 	color: #ff8e04;
 	font-size: 1.5rem;
@@ -16,19 +16,19 @@
 	text-align: center;
 }
 
-.form-group {
+.signup-form .form-group {
 	margin-bottom: 1.2rem;
 	text-align: left;
 }
 
-.form-group label {
+.signup-form .form-group label {
 	display: block;
 	margin-bottom: 0.5rem;
 	font-weight: 500;
 	color: #444444;
 }
 
-.form-group input {
+.signup-form .form-group input {
 	width: 100%;
 	padding: 0.6rem;
 	border: 1px solid #ccc;
@@ -39,20 +39,20 @@
 	transition: border 0.2s;
 }
 
-.form-group input:focus {
+.signup-form .form-group input:focus {
 	border: 1.5px solid #ff8e04;
 	outline: none;
 }
 
-.form-actions {
+.signup-form .form-actions {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-left: 1.2rem;
+	margin-top: 1.5rem;
 	gap: 0.5rem;
 }
 
-.login-form button {
+.signup-form button {
 	flex: 1;
 	padding: 0.75rem 0;
 	color: #444444;
@@ -66,35 +66,23 @@
 	margin: 0 0.2rem;
 }
 
-.login-form button:hover {
+.signup-form button:hover {
 	background-color: #e07b00;
 }
 
-.login-form .switch-btn {
+.signup-form .switch-btn {
 	background: #f6eee4;
 	color: #ff8e04;
 	border: 1px solid #ff8e04;
 	margin-left: 0.5rem;
 }
 
-.switch-btn:hover {
+.signup-form .switch-btn:hover {
 	background: #ffe2b8;
 }
 
-.lost-password {
-	margin-top: 1rem;
-	text-align: right;
-	font-size: 0.95rem;
-}
-
-.lost-password a {
-	color: #ff8e04;
-	text-decoration: underline;
-	cursor: pointer;
-}
-
 @media (max-width: 480px) {
-	.login-form {
+	.signup-form {
 		max-width: 98vw;
 		padding: 1rem;
 	}
