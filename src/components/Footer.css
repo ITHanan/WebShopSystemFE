@@ -19,3 +19,9 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 	font-size: 16px;
 	color: #FF8E04;
 }
+.link{
+	cursor: pointer;
+}
+.link:hover{
+	color: #a05800;
+}
