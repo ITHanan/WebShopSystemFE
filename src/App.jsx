@@ -2,12 +2,14 @@ import { HashRouter,Routes,Route } from "react-router-dom"
 import Home from "./pages/Home"
 import LoginForm from "./components/LoginForm"
 import Registration from "./components/Registration.jsx"
+import CourseList from "./components/CourseList.jsx"
 
 function App() {
 
   return (
 	<div className="wrapper">
-		<Registration />
+		{/* <Registration /> */}
+		<CourseList />
 	</div>
 	// <HashRouter>
 	// 	<Routes>
