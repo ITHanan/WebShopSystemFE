@@ -7,7 +7,7 @@ const LoginForm = () => {
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 	const [error, setError] = useState('');
-	
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setError('');
@@ -22,25 +22,25 @@ const LoginForm = () => {
 			},
 			body: JSON.stringify({ email, password }),
 		})
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error('Login failed');
-			}
-			return response.json();
-		})
-		.then((data) => {
-			// Handle successful login
-			console.log('Login successful:', data);
-		})
-		.catch((error) => {
-			// Handle errors
-			console.error('Error logging in:', error);
-		});
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error('Login failed');
+				}
+				return response.json();
+			})
+			.then((data) => {
+				// Handle successful login
+				console.log('Login successful:', data);
+			})
+			.catch((error) => {
+				// Handle errors
+				console.error('Error logging in:', error);
+			});
 	};
 	
 	return (
 		<form className='login-form' onSubmit={handleSubmit}>
-		{error && <div className="error-message">{error}</div>}
+			{error && <div className="error-message">{error}</div>}
 		<h2>Login to your account</h2>
 		<div className='form-group'>
 		<label>Email:</label>
@@ -62,20 +62,20 @@ const LoginForm = () => {
 		required
 		/>
 		</div>
-		
-		<div className="form-actions">
-		<button type="submit">Login</button>
-		<button
-		type="button"
-		className="switch-btn"
-		onClick={() => navigate('/signup')}
-		>
-		Sign up
-		</button>
-		</div>
-		<div className="lost-password">
-		Lost password? <a href="#">Click here</a>
-		</div>
+
+	            <div className="form-actions">
+                <button type="submit">Login</button>
+                <button
+                    type="button"
+                    className="switch-btn"
+                    onClick={() => navigate('/signup')}
+                >
+                    Sign up
+                </button>
+            </div>
+            <div className="lost-password">
+                Lost password? <a href="#">Click here</a>
+            </div>
 		</form>
 	);
 };
