@@ -3,13 +3,15 @@ import Home from "./pages/Home"
 import LoginForm from "./components/LoginForm"
 import Registration from "./components/Registration.jsx"
 import CourseList from "./components/CourseList.jsx"
+import CourseDetail from "./components/courseDetails.jsx"
 
 function App() {
 
   return (
 	<div className="wrapper">
 		{/* <Registration /> */}
-		<CourseList />
+		{/* <CourseList /> */}
+		<CourseDetail />
 	</div>
 	// <HashRouter>
 	// 	<Routes>
