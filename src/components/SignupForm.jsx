@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/SignUpForm.css'; 
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 const SignUpForm = () => {
 	const [signupName, setSignupName] = useState('');
@@ -42,6 +44,8 @@ const SignUpForm = () => {
 	};
 	
 	return (
+		<div>
+			<Header></Header>
 		<form className="signup-form" onSubmit={handleSignup}>
 		{error && <div className="error-message">{error}</div>}
 		<h2>Create your account</h2>
@@ -96,6 +100,8 @@ const SignUpForm = () => {
 		</button>
 		</div>
 		</form>
+		<Footer></Footer>
+		</div>
 	);
 };
 

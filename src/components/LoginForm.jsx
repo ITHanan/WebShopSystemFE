@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/LoginForm.css'; 
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
@@ -39,6 +41,8 @@ const LoginForm = () => {
 	};
 	
 	return (
+		<div>
+			<Header></Header>
 		<form className='login-form' onSubmit={handleSubmit}>
 		{error && <div className="error-message">{error}</div>}
 		<h2>Login to your account</h2>
@@ -77,6 +81,8 @@ const LoginForm = () => {
 		Lost password? <a href="#">Click here</a>
 		</div>
 		</form>
+		<Footer></Footer>
+		</div>
 	);
 };
 
