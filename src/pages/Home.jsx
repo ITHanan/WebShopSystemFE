@@ -91,7 +91,7 @@ function Home(){
 		</div>
 		</div>
 		</div>
-		<div className="main-text">
+		<div className="mainText">
 		<p>More than 10 languages</p>
 		<p>Over 2000 words</p>
 		<p>Thousands of phrases</p>

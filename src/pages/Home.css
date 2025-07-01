@@ -29,7 +29,7 @@ background: transparent;
 	display: flex;
 	flex-direction: row;
 }
-.main-text{
+.mainText{
 	display: flex;
 	flex-direction: column;
 align-items: center;}
