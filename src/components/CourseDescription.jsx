@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import '../styles/CourseDescription.css'
 import instructorImg from '../images/instructor.png'
 import flagImg from '../images/swedish-flag.png' 
+import Header from './Header'
+import Footer from "./Footer"
 const CourseDescription = () => {
 	const navigate = useNavigate()
 	
@@ -11,6 +13,8 @@ const CourseDescription = () => {
 	}
 	
 	return (
+		<div>
+			<Header></Header>
 		<div className='course-page'>
 		<h1 className='course-title'>
 		<img src={flagImg} alt='Swedish Flag' className='flag-icon' /> Swedish Course
@@ -71,6 +75,7 @@ const CourseDescription = () => {
 		
 		<button className='register-btn' onClick={handleRegister}>Register</button>
 		</div>
+		<Footer></Footer></div>
 	)
 }
 
