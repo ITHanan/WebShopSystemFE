@@ -1,28 +1,23 @@
-import { HashRouter,Routes,Route } from "react-router-dom"
-import Home from "./pages/Home"
-import LoginForm from "./components/LoginForm"
-import Registration from "./components/Registration.jsx"
-import CourseList from "./components/CourseList.jsx"
-import CourseDetail from "./components/courseDetails.jsx"
+import { Outlet } from 'react-router-dom';
+import './App.css';
+import './index.css';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import { MenuProvider } from './context/MenuContext.jsx';
+
 
 function App() {
-
   return (
-	<div className="wrapper">
-		{/* <Registration /> */}
-		{/* <CourseList /> */}
-		<CourseDetail />
-	</div>
-	// <HashRouter>
-	// 	<Routes>
-	// 		<Route path="/" element={<Home></Home>}></Route>
-	// 		<Route path="/login" element={<LoginForm />}></Route>
-	// 	</Routes>
-	// </HashRouter>
-	
-
-
-  )
+    <MenuProvider> 
+      <div className="layout">
+        <Header />
+        <main className="main">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </MenuProvider>
+  );
 }
 
-export default App
+export default App;
