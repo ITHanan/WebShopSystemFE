@@ -7,7 +7,7 @@ function Nav(){
 		<NavLink><li>
 			Home
 		</li></NavLink>
-		<NavLink><li>Courses</li></NavLink>
+        <NavLink to="/courses"><li>Courses</li></NavLink>
 		<NavLink><li>Blogs</li></NavLink>
 		<NavLink><li>About us</li></NavLink>
 		<NavLink><li>Contact</li></NavLink>
