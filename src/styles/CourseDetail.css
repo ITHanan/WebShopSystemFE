@@ -1,0 +1,101 @@
+.course-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Ariel', sans-serif;
+  color: #333;
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-summary {
+  display: flex;
+}
+
+.flag {
+  width: 40px;
+  height: auto;
+}
+
+.course-main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8931f;
+  padding: 1rem;
+  color: #444444;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.instructor-card *{
+  background-color: white;
+}
+
+.instructor-card{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  /* border-radius: 8px; */
+  margin-bottom: 1rem;
+
+
+}
+
+.instructor-photo {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-left: 1rem;
+}
+
+.course-section {
+  line-height: 1.6;
+}
+
+.course-section h3 {
+  margin-top: 1.5rem;
+  color: #f8931f;
+}
+
+.course-section ul {
+  padding-left: 1.2rem;
+}
+
+.course-section li {
+  list-style: disc;
+}
+
+.register-button-container {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.register-button {
+  background-color: #f8931f;
+  color: #444444;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #444444;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #db7e11;
+}
+
