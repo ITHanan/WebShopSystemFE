@@ -7,6 +7,8 @@ import ItalianFlag from '../assets/italian.png';
 import FrenchFlag from '../assets/french.png';
 import TurkishFlag from '../assets/turkish.png';
 import EnglishFlag from '../assets/british.png';
+import Header from './Header';
+import Footer from './Footer';
 
 const CourseList = () => {
 	const [courses, setCourses] = useState([]);
@@ -94,6 +96,8 @@ const CourseList = () => {
 	
 	
 	return (
+		<div>
+			<Header></Header>
 		<div className="course-list-container">
 		<h2 className="course-heading">Course List</h2>
 		<p className="course-subheading">
@@ -122,6 +126,7 @@ const CourseList = () => {
 			</div>
 		))}
 		</div>
+		<Footer></Footer></div>
 	);
 };
 
