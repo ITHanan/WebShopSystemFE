@@ -7,6 +7,10 @@
 	cursor: pointer;
 
 }
+.nav ul a{
+	text-decoration: none;
+	color: black;
+}
 .nav ul li{
 	border-radius: 5px;
 	border: 2px solid #FF8E04;
@@ -15,4 +19,24 @@
 }
 .nav ul li:hover{
 	background-color:#f9dfbf ;
+}
+@media screen and (max-width:700px) {
+	
+	.nav ul li{
+	border-radius: 5px;
+	border: 2px solid #FF8E04;
+	padding: 5px;
+	margin: 5px;
+}
+	
+}
+@media screen and (max-width:450px) {
+	.nav ul{
+		flex-direction: column;
+	}
+.nav ul li{
+	width: 90%;
+	text-align: center;
+}
+	
 }

@@ -15,7 +15,39 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 	height: 20px;
 	margin-right: 10px;
 }
+.column{
+	display: flex;
+	flex-direction: column;
+}
+.column a{	
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+
+
+}
 .title{
 	font-size: 16px;
 	color: #FF8E04;
+}
+.link{
+	cursor: pointer;
+}
+.link:hover{
+	color: #a05800;
+}
+@media screen and (max-width:700px) {
+	.footer{
+		padding-top: 10px;
+		margin: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+}
+@media screen and (max-width:400px) {
+	.footer{
+	
+		grid-template-columns: 1fr;
+	}
+	
 }

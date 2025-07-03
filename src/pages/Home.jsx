@@ -31,17 +31,13 @@ function Home(){
 			src:"/src/images/image 14.png",
 			name:"Swedish"
 		},
-		{id:7,
-			src:"/src/images/Group 46.png",
-			name:"Switzerland"
-		},
 		{id:8,
 			src:"/src/images/image 5.png",
 			name:"English"
 		},
 		{id:9,
 			src:"/src/images/image 6.png",
-			name:"Brazilian"
+			name:"Portuguese"
 		},
 		{id:10,
 			src:"/src/images/image 15.png",
@@ -67,11 +63,35 @@ function Home(){
 		<p className="background-none">Everything</p>
 		<p className="background-none"> You Need 
 		</p>
-		<p className="background-none">to Practice
-		</p>
+		<div className="background-none">to Practice
+			<div className="img-1">
+				<img src="/src/images/star.png" alt="star" />
+
+			</div>
+			<div className="img-2">
+				<img src="/src/images/sound.png" alt="sound" />
+
+			</div>
+			<div className="img-3">
+				<img src="/src/images/mobile.png" alt="mobile" />
+
+			</div>
+			<div className="img-4">
+				<img src="/src/images/check.png" alt="check" />
+
+			</div>
+			<div className="img-5">
+				<img src="/src/images/line.png" alt="line" />
+
+			</div>
+			<div className="img-6">
+				<img src="/src/images/mic.png" alt="mic" />
+
+			</div>
 		</div>
 		</div>
-		<div className="main-text">
+		</div>
+		<div className="mainText">
 		<p>More than 10 languages</p>
 		<p>Over 2000 words</p>
 		<p>Thousands of phrases</p>

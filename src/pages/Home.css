@@ -4,11 +4,12 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 30px;
-	width: 300px;
-	height: 300px;
+	width: 90%;
+	height: 90%;
 	background: linear-gradient(to bottom right, #FF8E04, #F6EEE4);
 	border-radius: 100%;
 	margin-right: 5px;
+	position: relative;
 }
 .circle-out{
 	width: 350px;
@@ -28,7 +29,7 @@ background: transparent;
 	display: flex;
 	flex-direction: row;
 }
-.main-text{
+.mainText{
 	display: flex;
 	flex-direction: column;
 align-items: center;}
@@ -37,4 +38,73 @@ align-items: center;}
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 100px 100px;
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6{
+	background-color: #F6EEE4;
+	padding: 7px;
+	position: absolute;
+	border: 2px solid #FF8E04;
+	border-radius: 100%;
+}
+.img-1{
+	right: 3%;
+	top: 20%;
+}
+.img-1 img{
+	width: 15px;
+}
+
+.img-2{
+	left: 70%;
+	bottom: 85%;
+}
+.img-2 img{
+	width: 18px;
+}
+.img-3{
+	bottom: 93%;
+	left: 44%;
+}
+.img-4{
+	left: 15%;
+	bottom: 84%;
+}
+.img-5{
+	right: 90%;
+	bottom: 55%;
+	padding: 10px;
+}
+.img-5 img{
+	width: 23px;
+}
+.img-6{
+	padding: 14px;
+	left: 0;
+	bottom: 20%;
+}
+@media screen and (max-width:700px) {
+	.main{
+		flex-direction: column;
+		align-items: center;
+	}
+	.main-text{
+		margin-top: 20px;
+	}
+	.flag-container{
+			margin: 20px 20px 60px 20px ;
+			grid-template-columns: 1fr 1fr 1fr 1fr ;
+	grid-template-rows: 100px 100px 100px;
+
+	}
+
+	
+}
+@media screen and (max-width:450px) {
+	.main{
+		margin-top: 30px;
+	}
+	.circle-out{
+		width: 250px;
+		height: 250px;
+	}
 }

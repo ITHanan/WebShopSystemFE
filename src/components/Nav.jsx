@@ -1,15 +1,16 @@
 import "../components/Nav.css"
+import { NavLink } from "react-router-dom"
 function Nav(){
 	return(
 <div className="nav">
 	<ul>
-		<li>
+		<NavLink><li>
 			Home
-		</li>
-		<li>Courses</li>
-		<li>Blogs</li>
-		<li>About us</li>
-		<li>Contact</li>
+		</li></NavLink>
+		<NavLink><li>Courses</li></NavLink>
+		<NavLink><li>Blogs</li></NavLink>
+		<NavLink><li>About us</li></NavLink>
+		<NavLink><li>Contact</li></NavLink>
 	</ul>
 
 </div>
