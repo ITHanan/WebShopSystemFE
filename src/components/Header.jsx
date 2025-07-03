@@ -3,6 +3,7 @@ import heart from "../images/heart.png"
 import basket from "../images/basket.png"
 import "../components/Header.css"
 import { NavLink } from "react-router-dom"
+import Nav from "./Nav";
 function Header(){
 	return(
 		<div className="header">
@@ -14,7 +15,6 @@ function Header(){
 				<NavLink><img src={heart} /></NavLink>
 				<NavLink><img src={basket} /></NavLink>
 			</div>
-
 		</div>
 
 	)

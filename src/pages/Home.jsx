@@ -59,7 +59,7 @@ function Home(){
 	]
 	return(
 		<div className="container">
-		<Header></Header>
+
 		<Nav></Nav>
 		<div className="main">
 		<div className="circle-out">
@@ -87,7 +87,6 @@ function Home(){
 		))}
 		</div>
 		
-		<Footer></Footer>
 		</div>
 	)
 }
