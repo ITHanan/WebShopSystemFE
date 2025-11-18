@@ -18,10 +18,13 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
+        working-directory: <PROJECT_PATH>
         run: dotnet restore
 
       - name: Build
+        working-directory: <PROJECT_PATH>
         run: dotnet build --configuration Release --no-restore
+
 
       # ---- Discord Notification (Success) ----
       - name: Discord Notification (Success)
@@ -44,3 +47,4 @@ jobs:
           curl -X POST -H "Content-Type: application/json" \
                -d "$payload" \
                "${{ secrets.DISCORD_WEBHOOK }}"
+
