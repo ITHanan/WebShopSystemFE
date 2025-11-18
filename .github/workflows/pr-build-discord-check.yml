@@ -1,0 +1,46 @@
+name: PR Build & Discord Notify
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # ---- Discord Notification (Success) ----
+      - name: Discord Notification (Success)
+        if: success()
+        run: |
+          payload='{
+            "content": "✅ **Build Success** on PR #'"${{ github.event.pull_request.number }}"' by **'"${{ github.actor }}"'**"
+          }'
+          curl -X POST -H "Content-Type: application/json" \
+               -d "$payload" \
+               "${{ secrets.DISCORD_WEBHOOK }}"
+
+      # ---- Discord Notification (Failure) ----
+      - name: Discord Notification (Failure)
+        if: failure()
+        run: |
+          payload='{
+            "content": "❌ **Build Failed** on PR #'"${{ github.event.pull_request.number }}"' by **'"${{ github.actor }}"'**"
+          }'
+          curl -X POST -H "Content-Type: application/json" \
+               -d "$payload" \
+               "${{ secrets.DISCORD_WEBHOOK }}"
